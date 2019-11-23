@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Product detail</h2>
+<a th:href="@{/}">Back the home page</a>
+<form method="post" th:action="@{/product/detail} ">
+    <label th:text="${id}"></label>
+    <div>
+        <label> Product Name:</label>
+        <label th:text="${product.getProductName()}"></label>
+    </div>
+    <div>
+        <label>Price:</label>
+        <label th:text="${product.getPrice()}"></label>
+    </div>
+    <div>
+        <label>Describe:</label>
+        <label th:text="${product.getDescribe()}"></label>
+    </div>
+</form>
+</body>
+</html>
+
+
+
